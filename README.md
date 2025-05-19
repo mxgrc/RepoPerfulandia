@@ -1,4 +1,4 @@
-# 🌸 Perfulandia - Proyecto Full Stack
+Perfulandia - Proyecto Full Stack
 
 **Ramo**: Full Stack  
 **Profesor**: Atanacio Mauricio Montano
@@ -8,14 +8,12 @@
 - David Coliqueo  
 
 ---
-
-## 🧠 Descripción del Proyecto
+Descripción del Proyecto
 
 Perfulandia es una aplicación backend construida con **Spring Boot** que permite gestionar productos, usuarios, pedidos, sucursales y envíos mediante microservicios. Cada microservicio tiene su propia lógica y controladores RESTful.
 
 ---
-
-## 🚀 Tecnologías utilizadas
+Tecnologías utilizadas
 
 - Java 22
 - Spring Boot 3.4.5
@@ -25,8 +23,7 @@ Perfulandia es una aplicación backend construida con **Spring Boot** que permit
 - Postman
 
 ---
-
-## 📁 Estructura del proyecto
+ Estructura del proyecto
 
 perfulandia/
 ├── producto
@@ -48,8 +45,7 @@ Cada paquete contiene:
 - `service`
 
 ---
-
-## 📦 Endpoints disponibles
+Endpoints disponibles
 
 ### Envíos (`/api/v1/envios`)
 - `GET /` → Lista todos los envíos
