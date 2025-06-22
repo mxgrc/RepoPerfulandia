@@ -34,10 +34,6 @@ perfulandia/
 ├── application.properties
 └── PerfulandiaApplication.java
 
-markdown
-Copiar
-Editar
-
 Cada paquete contiene:
 - `controller`
 - `model`
