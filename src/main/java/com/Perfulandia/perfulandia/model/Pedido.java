@@ -1,6 +1,7 @@
 package com.Perfulandia.perfulandia.model;
 
-import java.util.Date;
+import java.math.BigDecimal;
+import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,6 +11,8 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+
 
 @Entity
 @Table(name = "pedidos")
@@ -24,9 +27,9 @@ public class Pedido {
 
     private String clienteNombre;
 
-    private Date fecha;
+    private LocalDate fecha;
 
-    private Double total;
+    private BigDecimal total;
 
     private String estado; // EJ: PENDIENTE, ENVIADO, ENTREGADO
 }
