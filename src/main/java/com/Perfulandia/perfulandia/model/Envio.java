@@ -1,6 +1,6 @@
 package com.Perfulandia.perfulandia.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,6 +10,7 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 
 @Entity
 @Table(name = "envios")
@@ -22,9 +23,9 @@ public class Envio {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Date fechaSalida;
+    private LocalDate fechaSalida;
 
-    private Date fechaLlegada;
+    private LocalDate fechaLlegada;
 
     private String estado; // Ej: EN RUTA, ENTREGADO, CANCELADO
 
