@@ -25,4 +25,6 @@ public class Sucursal {
     private String direccion;
 
     private String ciudad;
+
+    private String telefono;
 }
