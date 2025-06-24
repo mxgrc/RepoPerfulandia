@@ -1,23 +1,28 @@
 package com.Perfulandia.perfulandia.controller;
 
-import com.Perfulandia.perfulandia.model.Sucursal;
-import com.Perfulandia.perfulandia.service.SucursalService;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
-import static org.mockito.Mockito.*;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+
+import com.Perfulandia.perfulandia.model.Sucursal;
+import com.Perfulandia.perfulandia.service.SucursalService;
 
 @ExtendWith(MockitoExtension.class)
 class SucursalControllerTest {
@@ -113,7 +118,9 @@ class SucursalControllerTest {
         actualizada.setNombre("Sucursal Actualizada");
         actualizada.setDireccion("Dir actualizada");
         actualizada.setCiudad("Ciudad actualizada");
-        actualizada.setTelefono("654321");
+        actualizada.setTelefono("123456");
+
+        
 
         when(sucursalService.findById(1L)).thenReturn(existente);
         when(sucursalService.save(any(Sucursal.class))).thenAnswer(inv -> inv.getArgument(0));

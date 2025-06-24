@@ -1,22 +1,24 @@
-package com.Perfulandia.perfulandia.envio.service;
+package com.Perfulandia.perfulandia.service;
 
-
-import com.Perfulandia.perfulandia.model.Envio;
-import com.Perfulandia.perfulandia.repository.EnvioRepository;
-import com.Perfulandia.perfulandia.service.EnvioService;
-
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+import org.mockito.MockitoAnnotations;
+
+import com.Perfulandia.perfulandia.model.Envio;
+import com.Perfulandia.perfulandia.repository.EnvioRepository;
 
 
 class EnvioServiceTest {
